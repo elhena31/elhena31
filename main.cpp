@@ -23,7 +23,7 @@ void board(){  // llamado al board
 	COORD snake_pos = snake.get_pos(); //obtenemos la posicion de snake y la guardamos en snake_pos
 	COORD food_pos = food.get_pos();		// obtenemos la posicion de food y lo guardamos en food_pos
 	
-	vector<COORD> snake_body = snake.get_body();  // obtenemos el tamaños o 'body' de 'snake'
+	vector<COORD> snake_body = snake.get_body();  // obtenemos el tamaÃ±os o 'body' de 'snake'
 	
 	cout<<"SCORE : " <<score << "\n\n"; 
 	
@@ -69,7 +69,7 @@ int main()
 	{
 		board();
 
-		if(kbhit())
+		if(kbhit())  // if Keyboard is hit
 		{
 			switch(getch())	
 			{
