@@ -32,7 +32,7 @@ void board(){  // llamado al board
 		cout<<"\t\t\t#";			//
 		for(int j = 0; j < WIDTH - 2; j++) 			//ciclo for para llenar
 		{											//con 3 la columna 0 y la columna 24 o
-			if(i == 0 || i == HEIGHT-1)	cout<<"8";	// Heigth - 1
+			if(i == 0 || i == HEIGHT-1)	cout<<"6";	// Heigth - 1
 			
 			else if(i == snake_pos.Y && j + 1 == snake_pos.X) cout<<'0'; 
 			else if(i == food_pos.Y && j + 1 == food_pos.X) cout<<'v';
