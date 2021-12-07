@@ -27,22 +27,22 @@ void board(){  // llamado al board
 	
 	cout<<"SCORE : " <<score << "\n\n"; 
 	
-	for (int i=0; i < HEIGHT; i++) 	//ciclo for para 
+	for (int row=0; row < HEIGHT; row++) 	//ciclo for para 
 	{								//llenae con # desde 0 hasta height=25
 		cout<<"\t\t\t#";			//
-		for(int j = 0; j < WIDTH - 2; j++) 			//ciclo for para llenar
+		for(int column = 0; column < WIDTH - 2; column++) 			//ciclo for para llenar
 		{											//con 3 la columna 0 y la columna 24 o
-			if(i == 0 || i == HEIGHT-1)	cout<<"6";	// Heigth - 1
+			if(row == 0 || row == HEIGHT-1)	cout<<"6";	// Heigth - 1
 			
-			else if(i == snake_pos.Y && j + 1 == snake_pos.X) cout<<'0'; 
-			else if(i == food_pos.Y && j + 1 == food_pos.X) cout<<'v';
+			else if(row == snake_pos.Y && column + 1 == snake_pos.X) cout<<'0'; 
+			else if(row == food_pos.Y && column + 1 == food_pos.X) cout<<'v';
 		
 			else
 			{
 				bool isBodyPart = false;
 				for(int k = 0; k < snake_body.size()-1; k++)
 				{
-					if(i == snake_body[k].Y && j+1 == snake_body[k].X)
+					if(row == snake_body[k].Y && column+1 == snake_body[k].X)
 					{
 						cout<< 'n';
 						isBodyPart = true;
